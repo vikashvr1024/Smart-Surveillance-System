@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "949217321036",
+    "project_id": "smart-surveillance-system-ai",
+    "storage_bucket": "smart-surveillance-system-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949217321036:android:dca026d1649095a75294e9",
+        "android_client_info": {
+          "package_name": "com.app.smart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949217321036-61tvhtr1nhk6v263l0cr0egehvtktime.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7P1Zj-tbQ3RG9wJLviTtWCBh4HaRExy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949217321036-61tvhtr1nhk6v263l0cr0egehvtktime.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949217321036-5rl9d48j24i4hv0h9h60cgfae2h0encq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.smartSurveillanceSystemAi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949217321036:android:ea0c1277253b439e5294e9",
+        "android_client_info": {
+          "package_name": "com.example.smart_surveillance_system_ai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949217321036-61tvhtr1nhk6v263l0cr0egehvtktime.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7P1Zj-tbQ3RG9wJLviTtWCBh4HaRExy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949217321036-61tvhtr1nhk6v263l0cr0egehvtktime.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949217321036-5rl9d48j24i4hv0h9h60cgfae2h0encq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.smartSurveillanceSystemAi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

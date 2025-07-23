@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="primary">#FF1976D2</color>
+    <color name="primary_dark">#FF1565C0</color>
+    <color name="primary_container">#FFE3F2FD</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_primary_container">#FF001D36</color>
+
+    <!-- Secondary brand colors -->
+    <color name="secondary">#FF2196F3</color>
+    <color name="secondary_container">#FFE3F2FD</color>
+    <color name="on_secondary">#FFFFFFFF</color>
+    <color name="on_secondary_container">#FF001D36</color>
+
+    <!-- Surface colors -->
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_variant">#FFE7E0EC</color>
+    <color name="on_surface">#FF1C1B1F</color>
+    <color name="on_surface_variant">#FF49454F</color>
+    
+    <!-- Background colors -->
+    <color name="background">#FFFFFFFF</color>
+    <color name="on_background">#FF1C1B1F</color>
+
+    <!-- Text colors with opacity levels -->
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#99000000</color>
+    <color name="text_tertiary">#61000000</color>
+    
+    <!-- Status colors -->
+    <color name="error">#FFB00020</color>
+    <color name="on_error">#FFFFFFFF</color>
+    <color name="error_container">#FFFFDAD6</color>
+    <color name="on_error_container">#FF410002</color>
+    <color name="success">#FF00C853</color>
+
+    <!-- Common colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Legacy colors (for backward compatibility) -->
+    <color name="primary_text">@color/text_primary</color>
+    <color name="secondary_text">@color/text_secondary</color>
+    <color name="accent">@color/secondary</color>
+    <color name="link_color">@color/secondary</color>
+    <color name="error_color">@color/error</color>
+
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+</resources> 

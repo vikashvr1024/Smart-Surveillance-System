@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Smart Surveillance</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">Login</string>
+    <string name="hint_email_username">Email/Username</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="btn_login">Login</string>
+    <string name="sign_up_prompt">Don\'t have an account? Sign Up</string>
+    
+    <!-- Registration Screen -->
+    <string name="register_title">Create Account</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="terms_conditions">I agree to the Terms &amp; Conditions</string>
+    <string name="read_terms">Read Terms &amp;\nConditions</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="login_prompt">Already have an account? Login</string>
+    
+    <!-- Error Messages -->
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_dont_match">Passwords don\'t match</string>
+    <string name="error_terms_not_accepted">You must accept the Terms &amp; Conditions</string>
+
+    <!-- Emergency Contacts -->
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="delete_contact">Delete Contact</string>
+    <string name="no_contacts">No emergency contacts added yet</string>
+    <string name="hint_contact_name">Contact Name</string>
+    <string name="hint_contact_phone">Phone Number</string>
+    <string name="hint_contact_relationship">Relationship (e.g. Family, Friend)</string>
+    <string name="notify_by_sms">SMS</string>
+    <string name="notify_by_call">Call</string>
+    <string name="add_contact_title">Add Emergency Contact</string>
+    <string name="delete_contact_title">Delete Contact</string>
+    <string name="delete_contact_message">Are you sure you want to delete this emergency contact?</string>
+    <string name="error_invalid_phone">Please enter a valid phone number</string>
+
+    <!-- Terms and Conditions -->
+    <string name="terms_title">Terms and Conditions</string>
+    <string name="accept_terms">I Accept</string>
+    <string name="terms_content">Welcome to Smart Surveillance\n\n
+1. Introduction\n
+By using Smart Surveillance, you agree to these terms. Please read them carefully.\n\n
+
+2. Service Description\n
+Smart Surveillance is a personal safety application that uses your device\'s sensors to detect potential accidents and notify emergency contacts.\n\n
+
+3. User Responsibilities\n
+- You must provide accurate emergency contact information
+- You must obtain consent from people you list as emergency contacts
+- You should not rely solely on this app for emergency situations
+- You should maintain your device in proper working condition\n\n
+
+4. Data Collection and Privacy\n
+We collect and process:\n
+- Location data
+- Sensor data (accelerometer, gyroscope)
+- Emergency contact information
+- Accident history\n
+This data is used solely for providing the service and is handled according to our privacy policy.\n\n
+
+5. Emergency Contact Notifications\n
+- The app will attempt to notify your emergency contacts in case of detected accidents
+- We cannot guarantee message delivery or response from emergency contacts
+- False alarms may occur despite our best efforts to minimize them\n\n
+
+6. Liability Limitations\n
+- The app is provided "as is" without warranties
+- We are not liable for any damages or injuries
+- The app is not a substitute for emergency services (911)
+- You should always call emergency services directly in life-threatening situations\n\n
+
+7. Account Security\n
+- You are responsible for maintaining the confidentiality of your account
+- You must notify us of any unauthorized use of your account
+- We recommend enabling device security features\n\n
+
+8. Service Availability\n
+- We strive for 24/7 availability but cannot guarantee uninterrupted service
+- Service may be affected by factors beyond our control (network coverage, device status)\n\n
+
+9. Modifications\n
+We may modify these terms at any time. Continued use of the app constitutes acceptance of modified terms.\n\n
+
+10. Termination\n
+We reserve the right to terminate service to any user who violates these terms.\n\n
+
+By using Smart Surveillance, you acknowledge that you have read, understood, and agree to these terms.</string>
+</resources> 

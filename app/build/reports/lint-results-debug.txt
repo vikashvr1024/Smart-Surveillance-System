@@ -1,0 +1,301 @@
+D:\Haaaa\app\src\main\java\com\app\smart\SettingsActivity.kt:104: Warning: Implicitly using the default locale is a common source of bugs: Use capitalize(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+        val currentIndex = sensitivityOptions.indexOf(currentSensitivity.replace("_", " ").capitalize())
+                                                                                           ~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\SettingsActivity.kt:113: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                    val selectedSensitivity = sensitivityOptions[position].replace(" ", "_").toUpperCase()
+                                                                                             ~~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\SettingsActivity.kt:113: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                    val selectedSensitivity = sensitivityOptions[position].replace(" ", "_").toUpperCase()
+                                                                                             ~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.US) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+D:\Haaaa\app\build.gradle:13: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdkVersion 33
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+D:\Haaaa\app\build.gradle:37: Warning: A newer version of androidx.core:core-ktx than 1.9.0 is available: 1.16.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:38: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:39: Warning: A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:40: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:41: Warning: A newer version of androidx.navigation:navigation-fragment-ktx than 2.6.0 is available: 2.8.9 [GradleDependency]
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:42: Warning: A newer version of androidx.navigation:navigation-ui-ktx than 2.6.0 is available: 2.8.9 [GradleDependency]
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:45: Warning: A newer version of com.google.firebase:firebase-bom than 32.2.2 is available: 33.13.0 [GradleDependency]
+    implementation platform('com.google.firebase:firebase-bom:32.2.2')
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:51: Warning: A newer version of com.google.android.gms:play-services-location than 21.0.1 is available: 21.3.0 [GradleDependency]
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:54: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\build.gradle:55: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+D:\Haaaa\app\src\main\res\values\colors.xml:36: Warning: The resource R.color.success appears to be unused [UnusedResources]
+    <color name="success">#FF00C853</color>
+           ~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\colors.xml:44: Warning: The resource R.color.secondary_text appears to be unused [UnusedResources]
+    <color name="secondary_text">@color/text_secondary</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.hint_contact_name appears to be unused [UnusedResources]
+    <string name="hint_contact_name">Contact Name</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.hint_contact_phone appears to be unused [UnusedResources]
+    <string name="hint_contact_phone">Phone Number</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:36: Warning: The resource R.string.hint_contact_relationship appears to be unused [UnusedResources]
+    <string name="hint_contact_relationship">Relationship (e.g. Family, Friend)</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:37: Warning: The resource R.string.notify_by_sms appears to be unused [UnusedResources]
+    <string name="notify_by_sms">SMS</string>
+            ~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.notify_by_call appears to be unused [UnusedResources]
+    <string name="notify_by_call">Call</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:39: Warning: The resource R.string.add_contact_title appears to be unused [UnusedResources]
+    <string name="add_contact_title">Add Emergency Contact</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\values\strings.xml:42: Warning: The resource R.string.error_invalid_phone appears to be unused [UnusedResources]
+    <string name="error_invalid_phone">Please enter a valid phone number</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+D:\Haaaa\app\src\main\res\mipmap-xxxhdpi\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+D:\Haaaa\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+D:\Haaaa\app\src\main\res\layout\dialog_password_confirm.xml:38: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_password_confirm.xml:45: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://material.io/components/dialogs/
+
+D:\Haaaa\app\src\main\java\com\app\smart\adapters\AlertHistoryAdapter.kt:41: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            locationView.text = "Location: ${alert.latitude}, ${alert.longitude}"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\adapters\AlertHistoryAdapter.kt:41: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            locationView.text = "Location: ${alert.latitude}, ${alert.longitude}"
+                                 ~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\MainActivity.kt:225: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        binding.tvMonitoringStatus.text = "Currently: ${if (isMonitoring) "ON" else "OFF"}"
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\MainActivity.kt:225: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvMonitoringStatus.text = "Currently: ${if (isMonitoring) "ON" else "OFF"}"
+                                           ~~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\MainActivity.kt:265: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        binding.tvCurrentLocation.text = "Lat: ${location.latitude}, Long: ${location.longitude}"
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\MainActivity.kt:265: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvCurrentLocation.text = "Lat: ${location.latitude}, Long: ${location.longitude}"
+                                          ~~~~~
+D:\Haaaa\app\src\main\java\com\app\smart\MainActivity.kt:265: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvCurrentLocation.text = "Lat: ${location.latitude}, Long: ${location.longitude}"
+                                                                   ~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:48: Warning: Hardcoded string "Monitoring Status", should use @string resource [HardcodedText]
+                        android:text="Monitoring Status"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:56: Warning: Hardcoded string "Accident Detection", should use @string resource [HardcodedText]
+                        android:text="Accident Detection"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:64: Warning: Hardcoded string "Currently: OFF", should use @string resource [HardcodedText]
+                        android:text="Currently: OFF"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:88: Warning: Hardcoded string "Emergency Contacts", should use @string resource [HardcodedText]
+                        android:text="Emergency Contacts"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:96: Warning: Hardcoded string "Manage Contacts", should use @string resource [HardcodedText]
+                        android:text="Manage Contacts"/>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:118: Warning: Hardcoded string "Current Location", should use @string resource [HardcodedText]
+                        android:text="Current Location"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:126: Warning: Hardcoded string "Fetching location...", should use @string resource [HardcodedText]
+                        android:text="Fetching location..."/>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:133: Warning: Hardcoded string "Share Location", should use @string resource [HardcodedText]
+                        android:text="Share Location"/>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:156: Warning: Hardcoded string "Alert History", should use @string resource [HardcodedText]
+                        android:text="Alert History"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_main.xml:180: Warning: Hardcoded string "Settings", should use @string resource [HardcodedText]
+        android:contentDescription="Settings"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:48: Warning: Hardcoded string "App Settings", should use @string resource [HardcodedText]
+                        android:text="App Settings"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:63: Warning: Hardcoded string "Dark Mode", should use @string resource [HardcodedText]
+                            android:text="Dark Mode"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:90: Warning: Hardcoded string "Send SMS Notifications", should use @string resource [HardcodedText]
+                            android:text="Send SMS Notifications"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:117: Warning: Hardcoded string "Make Emergency Calls", should use @string resource [HardcodedText]
+                            android:text="Make Emergency Calls"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:153: Warning: Hardcoded string "Accident Detection Sensitivity", should use @string resource [HardcodedText]
+                        android:text="Accident Detection Sensitivity"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:161: Warning: Hardcoded string "Impact Sensitivity Level", should use @string resource [HardcodedText]
+                        android:text="Impact Sensitivity Level"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:175: Warning: Hardcoded string "Acceleration Threshold", should use @string resource [HardcodedText]
+                        android:text="Acceleration Threshold"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:191: Warning: Hardcoded string "Rotation Threshold", should use @string resource [HardcodedText]
+                        android:text="Rotation Threshold"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:223: Warning: Hardcoded string "Emergency Contact Settings", should use @string resource [HardcodedText]
+                        android:text="Emergency Contact Settings"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\activity_settings.xml:231: Warning: Hardcoded string "Manage your emergency contacts and their notification preferences", should use @string resource [HardcodedText]
+                        android:text="Manage your emergency contacts and their notification preferences"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_add_contact.xml:14: Warning: Hardcoded string "Pick from Contacts", should use @string resource [HardcodedText]
+        android:text="Pick from Contacts"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_add_contact.xml:23: Warning: Hardcoded string "Contact Name", should use @string resource [HardcodedText]
+        android:hint="Contact Name"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_add_contact.xml:39: Warning: Hardcoded string "Phone Number", should use @string resource [HardcodedText]
+        android:hint="Phone Number"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_add_contact.xml:55: Warning: Hardcoded string "Relationship", should use @string resource [HardcodedText]
+        android:hint="Relationship"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_password_confirm.xml:11: Warning: Hardcoded string "Enter Password to Delete", should use @string resource [HardcodedText]
+        android:text="Enter Password to Delete"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_password_confirm.xml:28: Warning: Hardcoded string "Password", should use @string resource [HardcodedText]
+            android:hint="Password"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_password_confirm.xml:42: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+            android:text="Cancel"
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\dialog_password_confirm.xml:49: Warning: Hardcoded string "Delete", should use @string resource [HardcodedText]
+            android:text="Delete"
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\layout\item_alert_history.xml:57: Warning: Hardcoded string "Delete Alert", should use @string resource [HardcodedText]
+                android:contentDescription="Delete Alert"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Haaaa\app\src\main\res\menu\main_menu.xml:6: Warning: Hardcoded string "Logout", should use @string resource [HardcodedText]
+        android:title="Logout"
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 64 warnings

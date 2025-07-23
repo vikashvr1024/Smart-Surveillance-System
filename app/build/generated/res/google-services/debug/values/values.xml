@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">949217321036-61tvhtr1nhk6v263l0cr0egehvtktime.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">949217321036</string>
+    <string name="google_api_key" translatable="false">AIzaSyC7P1Zj-tbQ3RG9wJLviTtWCBh4HaRExy4</string>
+    <string name="google_app_id" translatable="false">1:949217321036:android:dca026d1649095a75294e9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC7P1Zj-tbQ3RG9wJLviTtWCBh4HaRExy4</string>
+    <string name="google_storage_bucket" translatable="false">smart-surveillance-system-ai.firebasestorage.app</string>
+    <string name="project_id" translatable="false">smart-surveillance-system-ai</string>
+</resources>
